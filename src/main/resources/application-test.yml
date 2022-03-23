@@ -1,0 +1,20 @@
+server:
+  port: 9000
+### 部署到测试服务器上的环境-相当于测试环境
+spring:
+  datasource:
+    url: jdbc:mysql://8.136.45.4:3306/academic_early_warning_sysstem_database?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: kilig_1
+    password: kilig_1
+  redis:
+    host: 8.136.45.4
+    database: 0
+    port: 6379
+    password: kiligRedis
+    timeout: 300ms
+    key:
+      user: 'a:user'
+      auth: 'a:auth'
+    expire:
+      common: 86400 #24小时
+
